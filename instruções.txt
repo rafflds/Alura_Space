@@ -1,0 +1,31 @@
+Terminal
+
+0 - mudar versão do python ctrl + shift + p (python select interpreter)
+1 - virtualenv venv
+2 -source venv/bin/activate , deactivate
+3 - pip install django
+4 - mostrar todas as dependências necessarias pra o projeto funcionar - pip freeze
+5 - pip freeze > requirements.txt   (Criar o arquivo com as dependências)
+6- django-admin startproject setup .   (inicializar o Django)
+7- subir o servidor   - python manage.py runserver
+8- pip install python-dotenv  (serve para esconda a palavra chave da API. Ela não pode subir para o Github)
+
+    1.1 - Depois de instalado o dotenv, settings.py, SECRET_KEY (LINHA 23), digite:
+    1.2 - SECRET_KEY = str(os.getenv('SECRET_KEY')), na linha 13, mantenha esses import:
+    1.3 - from pathlib import Path, os
+    1.4 - from dotenv import load_dotenv
+    1.5 - crie um arquivo, chamado: .env, copie a SECRET_KEY e cole. SECRET_KEY = django-insecure-u6v8#jw7k3nd72i@u2_h3pv(*5a*fc15qgz_u2csz83vh3t__8, 
+    1.6 - retire as aspas '' da SECRET_KEY
+    1.7 - este arquivo .env, não será enviado para o Github  
+    1.8 - criar um arquivo git ignore: botão file, .gitignore
+    1.9 - entra no site: https://www.toptal.com/developers/gitignore , digite: Django, ele irá mostrar tudo que deve ser ignorado para git
+    2.0 - copie tudo, e cole no arquivo, .gitignore
+
+
+Django arquivo
+
+settings.py  - configurar o projeto inteiro, muito usado
+
+1 -LANGUAGE_CODE = 'pt-br'    (mudar linguagem)
+2 -TIME_ZONE = 'America/Sao_Paulo'    (horário)
+
