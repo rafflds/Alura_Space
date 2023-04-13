@@ -6,7 +6,7 @@ Terminal
 3 - pip install django
 4 - mostrar todas as dependências necessarias pra o projeto funcionar - pip freeze
 5 - pip freeze > requirements.txt   (Criar o arquivo com as dependências)
-6- django-admin startproject setup .   (inicializar o Django)
+6- django-admin startproject setup .   (inicializar as configurações do Django)
 7- subir o servidor   - python manage.py runserver
 8- pip install python-dotenv  (serve para esconda a palavra chave da API. Ela não pode subir para o Github)
 
@@ -21,11 +21,60 @@ Terminal
     1.9 - entra no site: https://www.toptal.com/developers/gitignore , digite: Django, ele irá mostrar tudo que deve ser ignorado para git
     2.0 - copie tudo, e cole no arquivo, .gitignore
 
+9- parar o servidor, ctrl + c, limpar line, ctrl + l, git init, git add .
+10- git commit -m 'Projeto Alura Space', git remote add origin https://github.com/rafflds/Alura_Space.git
+11- git push origin master
+12- python manage.py startapp galeria (galeria é o nome da pasta a ser criada), estou criando a aplicação 
+13- settings.py, INSTALLED_APPS(linha 36), adicione: galeria (nome da pasta criada) 
+    Irá ficar assim
+                    INSTALLED_APPS = [
+                    'django.contrib.admin',
+                    'django.contrib.auth',
+                    'django.contrib.contenttypes',
+                    'django.contrib.sessions',
+                    'django.contrib.messages',
+                    'django.contrib.staticfiles',
+                    'galeria',
+                ]
+
+
+
 
 Django arquivo
 
-settings.py  - configurar o projeto inteiro, muito usado
+Pasta setup
+    settings.py  - configurar o projeto inteiro, muito usado
+        1 -LANGUAGE_CODE = 'pt-br'    (mudar linguagem)
+        2 -TIME_ZONE = 'America/Sao_Paulo'    (horário)
 
-1 -LANGUAGE_CODE = 'pt-br'    (mudar linguagem)
-2 -TIME_ZONE = 'America/Sao_Paulo'    (horário)
+    urls.py  - onde ficam as rotas de acesso
+
+
+Pasta galeria
+    views.py  (responsável, pelo o que será exibido, na tela)
+    dentro da pasta galeria, criar um arquivo, urls.py
+
+
+Criar pasta templates, pasta setup, settings, TEMPLATES = [] (linha 58), 'DIRS': [],
+    Acrescentar 'DIRS': [os.path.join(BASE_DIR, 'templates')]
+    criar um arquivo, index.html
+    voltar até pasta galeria, arquivo view.py, altere o arquivo
+
+
+
+
+Transmission Control Protocol (TCP) - Protocolo de Controle de Transmissão. 
+Esse protocolo utiliza de artifícios chamados de Portas de Comunicação para gerenciar as trocas de informações de várias aplicações do sistema
+instaladas na mesma máquina física.
+
+Aqui estão algumas das Portas de Comunicação mais conhecidas e suas atribuições:
+Porta	Atribuição
+80	HTTP
+433	HTTPS
+22	SSH
+53	DNS
+25	SMTP
+465	SMTPS
+20, 21	FTP
+67, 68	DHCP
 
